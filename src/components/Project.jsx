@@ -1,16 +1,21 @@
-import { RiGithubLine } from 'react-icons/ri';
+import { RiGithubLine, RiExternalLinkLine } from 'react-icons/ri';
 
 const Project = ({
-  project: { name, ghLink, preview, stacks, description },
+  project: { name, link, ghLink, preview, stacks, description },
   even,
 }) => {
   return (
     <div className={`mb-14 lg:flex ${even && 'lg:flex-row-reverse'}`}>
       <div className="text-xl font-bold text-center mb-4 visible lg:invisible lg:absolute flex items-center justify-center">
-        <h3>{name}</h3>{' '}
-        <a href={ghLink} target="_blank" rel="noreferrer">
-          <RiGithubLine className="text-blue w-[28px]" />
-        </a>{' '}
+        <h3 className="pr-1">{name}</h3>
+        <div className="flex">
+          <a href={ghLink} target="_blank" rel="noreferrer">
+            <RiGithubLine className="text-blue w-[28px] -mr-2" />
+          </a>
+          <a href={link} target="_blank" rel="noreferrer">
+            <RiExternalLinkLine className="text-blue w-[28px]" />
+          </a>
+        </div>
       </div>
       <div className="mb-3">
         <div
@@ -18,11 +23,13 @@ const Project = ({
             even ? '-left-1 before:-right-2' : '-right-1 before:-left-2'
           }`}
         >
-          <img
-            src={preview}
-            alt="project preview"
-            className="relative z-10 border"
-          />
+          <a href={link} target="_blank" rel="noreferrer">
+            <img
+              src={preview}
+              alt="project preview"
+              className="relative z-10 border"
+            />
+          </a>
         </div>
         <div
           className={`bg-light w-full h-px absolute ${
@@ -42,9 +49,15 @@ const Project = ({
             }`}
           >
             {even && <h3>{name}</h3>}
-            <a href={ghLink} target="_blank" rel="noreferrer">
-              <RiGithubLine className="text-blue hover:text-dark-blue transition-colors w-[32px]" />
-            </a>
+            <div className="flex">
+              <a href={ghLink} target="_blank" rel="noreferrer">
+                <RiGithubLine className="text-blue hover:text-light transition-colors duration-500 w-[32px]" />
+              </a>
+              <a href={link} target="_blank" rel="noreferrer">
+                <RiExternalLinkLine className="text-blue hover:text-light transition-colors duration-500 w-[32px]" />
+              </a>
+            </div>
+
             {!even && <h3>{name}</h3>}
           </div>
           <div

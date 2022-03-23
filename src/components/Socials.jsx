@@ -1,20 +1,27 @@
-const Socials = ({ list }) => {
+import BottomFixedContainer from './BottomFixedContainer';
+import Email from './Email';
+import SOCIALS from '../constants/SOCIALS';
+
+const Socials = () => {
   return (
-    <div className="invisible sm:visible fixed bottom-0 left-[3%] z-10 flex flex-col w-min items-center gap-2">
-      {list.map(({ link, Icon }) => {
-        return (
-          <a
-            href={link}
-            target="_blank"
-            rel="noreferrer"
-            key={link}
-            className="hover:-translate-y-1 transition-transform duration-300"
-          >
-            <Icon size={38} />
-          </a>
-        );
-      })}
-      <div className="bg-dark w-px h-[100px]"></div>
+    <div className="fade-in">
+      <BottomFixedContainer additionalClasses="left-[3%]">
+        {SOCIALS.map(({ link, Icon }) => {
+          return (
+            <a
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+              key={link}
+              className="hover:-translate-y-1 transition-all duration-300"
+            >
+              <Icon size={38} />
+            </a>
+          );
+        })}
+        <div className="px-line-y-dark transition-all"></div>
+      </BottomFixedContainer>
+      <Email />
     </div>
   );
 };

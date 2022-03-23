@@ -1,6 +1,8 @@
+import PROJECTS from '../constants/PROJECTS';
 import { SectionTitle, Project } from './exports';
 
-const Projects = ({ content: { title, projects } }) => {
+const Projects = () => {
+  const { title, projects } = PROJECTS;
   return (
     <section id="projects" className="section mt-16 lg:mt-32 xl:mt-44">
       <div className="mb-10 lg:mb-14">

@@ -1,6 +1,7 @@
 export { default as Navbar } from './Navbar';
 export { default as Content } from './Content';
 export { default as Home } from './Home';
+export { default as BottomFixedContainer } from './BottomFixedContainer';
 export { default as SectionTitle } from './SectionTitle';
 export { default as Skills } from './Skills';
 export { default as Skill } from './Skill';

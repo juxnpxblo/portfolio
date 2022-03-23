@@ -6,7 +6,11 @@ const Skill = ({ children, icon, name, odd }) => {
       }`}
     >
       <div className="w-[130px] mx-auto relative">
-        <img src={icon} alt="" />
+        <img
+          src={icon}
+          alt=""
+          className="transition-all duration-1000 hover:grayscale"
+        />
         <h3 className="text-lg font-medium text-center mt-1.5">{name}</h3>
         {children}
       </div>

@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
 
 /* TailwindCSS setup */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,22 +10,29 @@
     @apply mx-4 sm:mx-[10%] relative;
   }
   .skill-topic {
-    @apply text-darker font-bold text-7xl xl:text-8xl invisible lg:visible absolute w-max;
+    @apply text-darker font-bold text-7xl xl:text-8xl invisible lg:visible absolute w-max hover:text-light transition-colors duration-500;
   }
   .front-layer-blue {
     @apply after:bg-blue after:w-full after:h-full after:absolute after:top-0 after:opacity-40 after:hover:opacity-0 after:transition-opacity after:duration-300;
   }
+  .px-line-y-dark {
+    @apply bg-dark w-px h-[100px];
+  }
+}
+
+@layer utilities {
+  .writing-y-lr {
+    writing-mode: vertical-lr;
+  }
 }
 
 /* Base */
-
 html {
   height: 100%;
   --blue: #2666cf;
   --light: #f5f2e7;
   --bg: #2c3333;
 }
-
 body {
   height: 100%;
   margin: 0;
@@ -36,7 +42,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 #root {
   height: 100%;
   background-color: var(--bg);
@@ -55,6 +60,18 @@ body {
   background: var(--blue);
   border-radius: 1px;
 }
+
+/* Last stack/nav item invisible separating dot */
+.nav-item:last-child :last-child {
+  visibility: hidden;
+  position: absolute;
+}
+.stack:last-child :last-child {
+  visibility: hidden;
+  position: absolute;
+}
+
+/* Animations (all generated on animista.net then modified) */
 
 /* Home cursor animation */
 .slide-up {
@@ -79,16 +96,6 @@ body {
   }
 }
 
-/* Last stack/nav item invisible separating dot */
-.nav-item:last-child :last-child {
-  visibility: hidden;
-  position: absolute;
-}
-.stack:last-child :last-child {
-  visibility: hidden;
-  position: absolute;
-}
-
 /* Waving hand emoji animation */
 .wave {
   animation: wave 0.6s ease-in-out infinite alternate-reverse both;
@@ -99,5 +106,192 @@ body {
   }
   100% {
     transform: rotate(-25deg);
+  }
+}
+
+/* Navbar items */
+.navbar-1 {
+  animation: navbar-1 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+@keyframes navbar-1 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.navbar-2 {
+  animation: navbar-2 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+@keyframes navbar-2 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.navbar-3 {
+  animation: navbar-3 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+@keyframes navbar-3 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  66% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Home items */
+.home-1 {
+  animation: home-1 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+@keyframes home-1 {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  75% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.home-2 {
+  animation: home-2 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+@keyframes home-2 {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.home-3 {
+  animation: home-3 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+@keyframes home-3 {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  83% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.home-4 {
+  animation: home-4 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+@keyframes home-4 {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  86% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.home-5 {
+  animation: home-5 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+@keyframes home-5 {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  87% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Picture block */
+.slide-left {
+  animation: slide-left 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  89% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Socials */
+.fade-in {
+  animation: fade-in 2s;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Home cursor */
+.fade-in-2 {
+  animation: fade-in2 2.2s;
+}
+@keyframes fade-in2 {
+  0% {
+    opacity: 0;
+  }
+  91% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

@@ -1,6 +1,9 @@
+import SKILLS from '../constants/SKILLS';
 import { SectionTitle, Skill, SubSkill } from './exports';
 
-const Skills = ({ content: { title, topics, skills } }) => {
+const Skills = () => {
+  const { title, topics, skills } = SKILLS;
+
   return (
     <section id="skills" className="section pt-20">
       <div className="mb-20 lg:mb-24 xl:mb-40">
