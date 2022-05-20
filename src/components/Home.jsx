@@ -13,7 +13,7 @@ const Home = () => {
     >
       <div>
         <p className="md:text-xl mb-2 lg:mb-4 home-1 transition-all">
-          Hi <span className="wave inline-block w-min">👋</span>, my name is
+          Olá <span className="wave inline-block w-min">👋</span>, eu me chamo
         </p>
         <p className="text-2xl lg:text-4xl xl:text-5xl font-bold lg:mb-1 xl:mb-2 home-2 transition-all">
           {name}

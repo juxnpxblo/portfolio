@@ -4,12 +4,12 @@ import resume from '../assets/resume.pdf';
 const HOME = {
   text: {
     name: 'Juan Pablo Carrilho',
-    subtitle: '<Web Developer />',
+    subtitle: '<Full Stack Dev />',
     description:
-      "I'm a self-taught Web Developer based in Brazil, currently open to job opportunities ⚡. Feel free to hit me up.",
+      'Um desenvolvedor apaixonado pelo conhecimento e em constante evolução. Atualmente em formação em Análise e Desenvolvimento de Sistemas e me encontro aberto a oportunidades ⚡. Sinta-se convidado(a) a entrar em contato.',
   },
   button: {
-    text: 'See resume',
+    text: 'Currículo',
     link: resume,
   },
   image: { src: homeImg, alt: 'A selfie' },

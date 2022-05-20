@@ -3,7 +3,7 @@ import preview2 from '../assets/preview-2.png';
 import preview3 from '../assets/preview-3.png';
 
 const PROJECTS = {
-  title: 'Personal projects',
+  title: 'Projetos pessoais',
   projects: [
     {
       name: 'Real-time chat',
@@ -12,7 +12,7 @@ const PROJECTS = {
       preview: preview1,
       stacks: ['Typescript', 'React', 'Redux', 'Socket.io', 'PostgreSQL'],
       description:
-        "A simple chat app that uses the WebSocket protocol through the Socket.io library to make the real-time feature possible. It also has a simple register/login system, where the register component will check the user input while they're typing and will dynamically respond to errors on the client or server-side, when registering the user into the database.",
+        'Um chat que se utiliza do protocolo WebSocket, através da biblioteca Socket.io, para oferecer a funcionalidade de comunicação em tempo real. Também possui um sistema de registro e login, onde as entradas do usuário são testadas em tempo real no front-end e, posteriormente, no back-end, sendo o usuário informado em caso de inconsistências.',
     },
     {
       name: 'To-do list',
@@ -21,7 +21,7 @@ const PROJECTS = {
       preview: preview2,
       stacks: ['Typescript', 'React', 'Redux', 'PostgreSQL'],
       description:
-        "A simple to-do app that allows the user to create, edit, remove and check their todos. On the top there's a counter of how many (of the total) todos are checked. When you click on the cog, you get offered some options of background colors, that is stored in the browser storage so it can persist after reloading.",
+        'Uma aplicação de organização de tarefas pessoais que permite ao usuário criar, editar, remover, marcar e desmarcar suas tarefas. No topo da interface há um contador do total de tarefas concluídas, e a aplicação também oferece uma paleta de cores de fundo, que, no momento da escolha, ela é armazenada no navegador do usuário e, então, persiste após o recarregamento da página.',
     },
     {
       name: 'Insta UI clone',
@@ -30,7 +30,7 @@ const PROJECTS = {
       preview: preview3,
       stacks: ['React', 'TailwindCSS'],
       description:
-        "This was my attempt to replicate the Instagram's web app UI. I did the login, feed and profile interfaces. The one that I dedicated the most amount of time to was the login page, that has this cool fading effect on the iPhone screen on a loop — as it was implemented, you just need to place one image above the other (last to first) and choose a delay. It also has this other cool effect on the input's placeholder: it contracts on typing.",
+        'Uma réplica da interface do site do Instagram. Foram replicadas as telas de login, feed e perfil. Com destaque para a tela de login, com o efeito de fade em loop na tela do iPhone — que sua implementação exigiu certa complexidade — e também o efeito de contração dos placeholders na presença de texto.',
     },
   ],
 };

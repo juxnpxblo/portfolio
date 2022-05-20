@@ -9,12 +9,13 @@ import {
   SiExpress,
   SiSocketdotio,
   SiHeroku,
+  SiReact,
 } from 'react-icons/si';
 import { FaGitAlt, FaFigma } from 'react-icons/fa';
 
 const SKILLS = {
-  title: 'What I can do',
-  topics: ['Languages', 'Front-end', 'Back-end'],
+  title: 'O que eu sei fazer',
+  topics: ['Linguagens', 'Front-end', 'Back-end'],
   skills: [
     {
       name: 'Typescript',
@@ -42,11 +43,15 @@ const SKILLS = {
       name: 'React',
       icon: reactLogo,
       subSkills: [
-        { name: 'Hooks', Icon: null, offset: { x: '-left-10', y: 'top-0' } },
+        {
+          name: 'React Native',
+          Icon: SiReact,
+          offset: { x: '-left-28', y: 'top-6' },
+        },
         {
           name: 'TailwindCSS',
           Icon: SiTailwindcss,
-          offset: { x: '-left-28', y: 'top-20' },
+          offset: { x: '-left-28', y: 'top-24' },
         },
         {
           name: 'Context',
@@ -54,9 +59,14 @@ const SKILLS = {
           offset: { x: '-right-12', y: 'top-2' },
         },
         {
+          name: 'Hooks',
+          Icon: null,
+          offset: { x: '-right-16', y: 'top-12' },
+        },
+        {
           name: 'Redux',
           Icon: SiRedux,
-          offset: { x: '-right-16', y: 'top-28' },
+          offset: { x: '-right-12', y: 'top-28' },
         },
       ],
     },
